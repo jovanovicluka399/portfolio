@@ -1,0 +1,21 @@
+// webpack.config.js
+module.exports = {
+  // ...
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-react'],
+            // Add this option:
+            throwIfNamespace: false,
+          },
+        },
+      },
+      // ...
+    ],
+  },
+  // ...
+};
