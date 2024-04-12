@@ -17,6 +17,10 @@ function App() {
   const aboutUsRef = useRef(null);
   const whatWeDoRef = useRef(null);
   const portfolioRef = useRef(null);
+  const PricingModelRef = useRef(null);
+  const LatestNewsRef = useRef(null);
+  const ContactUsModelRef = useRef(null);
+  const TestimonialModelRef = useRef(null);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -45,17 +49,17 @@ function App() {
         <PortfolioModel />
       </div>
       <ReadyModel />
-      <div ref={portfolioRef} id="review">
+      <div ref={TestimonialModelRef} id="review">
         <TestimonialModel />
       </div>
-      <div ref={portfolioRef} id="pricing">
+      <div ref={PricingModelRef} id="pricing">
         <PricingModel />
       </div>
       <OurTeamModel />
-      <div ref={portfolioRef} id="blog">
+      <div ref={LatestNewsRef} id="blog">
         <LatestNews />
       </div>
-      <div ref={portfolioRef} id="contact">
+      <div ref={ContactUsModelRef} id="contact">
         <ContactUsModel />
       </div>
       <Footer />
