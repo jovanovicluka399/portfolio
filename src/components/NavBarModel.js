@@ -255,53 +255,77 @@ const Navbar = ({ scrollToSection }) => {
               </a>
 
               <a
-                href="/AboutUs"
-                className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
-              >
-                About us
-              </a>
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("about-us");
+                  }}
+                  className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
+                >
+                  About Us
+                </a>
 
-              <a
-                href="/Services"
-                className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
-              >
-                Services
-              </a>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("what-we-do");
+                  }}
+                  className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
+                >
+                  Services
+                </a>
 
-              <a
-                href="/Portfolio"
-                className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
-              >
-                Portfolio
-              </a>
-
-              <a
-                href="/Review"
-                className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
-              >
-                Review
-              </a>
-
-              <a
-                href="/Review"
-                className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
-              >
-                Pricing
-              </a>
-
-              <a
-                href="/Review"
-                className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
-              >
-                Blog
-              </a>
-
-              <a
-                href="/Review"
-                className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
-              >
-                Contact us
-              </a>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("portfolio");
+                  }}
+                  className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
+                >
+                  Portfolio
+                </a>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("review");
+                  }}
+                  className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
+                >
+                  Review
+                </a>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("pricing");
+                  }}
+                  className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
+                >
+                  Pricing
+                </a>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("blog");
+                  }}
+                  className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
+                >
+                  Blog
+                </a>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("contact");
+                  }}
+                  className="block px-3 text-base font-medium text-slate-800 hover:text-orange-600"
+                >
+                  Contact us
+                </a>
             </div>
           </div>
         )}
