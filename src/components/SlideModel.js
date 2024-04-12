@@ -9,7 +9,7 @@ export default function SimpleSlider() {
   const [updateCount, setUpdateCount] = useState(0);
   let sliderRef = useRef(null);
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
@@ -23,7 +23,7 @@ export default function SimpleSlider() {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
     ],
@@ -32,15 +32,7 @@ export default function SimpleSlider() {
   };
 
   return (
-    <div className="">
-      {/* <p>Total updates: {updateCount} </p>
-      <input
-        onChange={(e) => sliderRef.slickGoTo(e.target.value)}
-        value={slideIndex}
-        type="range"
-        min={0}
-        max={3}
-      /> */}
+    <div>
       <Slider
         ref={(slider) => {
           sliderRef = slider;
@@ -66,6 +58,64 @@ export default function SimpleSlider() {
             <h6 className="text-sm text-slate-500">Manager</h6>
           </div>
         </div>
+        <div className="relative py-8 mx-5 mt-8 overflow-hidden bg-white rounded-md shadow-md shadow-text-800">
+          <div className="w-[100px] mx-auto overflow-hidden rounded-full">
+            <img
+              src={TestimonialImage}
+              alt="Testimonal1"
+              className="object-cover object-center"
+            />
+          </div>
+          <div className="px-6 mt-6 text-center">
+            <p className="pb-3 text-lg text-slate-600">
+              "It seems that only fragments of the original text remain in the
+              Lorem Ipsum texts used today. "
+            </p>
+            <h3 className="mb-1 text-lg font-medium text-orange-600">
+              Christa Smith
+            </h3>
+            <h6 className="text-sm text-slate-500">Manager</h6>
+          </div>
+        </div>
+        <div className="relative py-8 mx-5 mt-8 overflow-hidden bg-white rounded-md shadow-md shadow-text-800">
+          <div className="w-[100px] mx-auto overflow-hidden rounded-full">
+            <img
+              src={TestimonialImage}
+              alt="Testimonal1"
+              className="object-cover object-center"
+            />
+          </div>
+          <div className="px-6 mt-6 text-center">
+            <p className="pb-3 text-lg text-slate-600">
+              "It seems that only fragments of the original text remain in the
+              Lorem Ipsum texts used today. "
+            </p>
+            <h3 className="mb-1 text-lg font-medium text-orange-600">
+              Christa Smith
+            </h3>
+            <h6 className="text-sm text-slate-500">Manager</h6>
+          </div>
+        </div>
+        <div className="relative py-8 mx-5 mt-8 overflow-hidden bg-white rounded-md shadow-md shadow-text-800">
+          <div className="w-[100px] mx-auto overflow-hidden rounded-full">
+            <img
+              src={TestimonialImage}
+              alt="Testimonal1"
+              className="object-cover object-center"
+            />
+          </div>
+          <div className="px-6 mt-6 text-center">
+            <p className="pb-3 text-lg text-slate-600">
+              "It seems that only fragments of the original text remain in the
+              Lorem Ipsum texts used today. "
+            </p>
+            <h3 className="mb-1 text-lg font-medium text-orange-600">
+              Christa Smith
+            </h3>
+            <h6 className="text-sm text-slate-500">Manager</h6>
+          </div>
+        </div>
+        
       </Slider>
     </div>
   );

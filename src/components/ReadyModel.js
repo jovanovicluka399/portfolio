@@ -17,7 +17,7 @@ const Ready = () => {
           </p>
         </div>
         <div className="relative flex justify-center mx-auto mt-10">
-          <a className="text-white bg-orange-600 border-orange-600 rounded-md btn hover:bg-orange-700 hover:border-orange-700" href="#">Get started !</a>
+          <a className="text-white bg-orange-600 border-orange-600 rounded-md btn hover:bg-orange-700 hover:border-orange-700" href="/">Get started !</a>
         </div>
       </div>
     </section>

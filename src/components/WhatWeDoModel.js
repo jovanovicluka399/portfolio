@@ -305,7 +305,7 @@ const WhatWeDoModel = () => {
                 <img
                   src={StrategyImage}
                   alt="StrategyImage"
-                  className="w-64 h-64 "
+                  className="w-64 h-64 md:mr-6 md:ml-auto"
                 />
               </div>
               <div className="max-[767px]:absolute z-20 flex items-center order-1 -mt-40 bg-white rounded-full ms-2 circle w-7 h-7 ">
@@ -351,7 +351,7 @@ const WhatWeDoModel = () => {
                 <img
                   src={LaunchImage}
                   alt="LaunchImage"
-                  className="w-64 h-64"
+                  className="w-64 h-64 md:mr-6 md:ml-auto"
                 />
               </div>
               <div className="max-[767px]:absolute z-20 flex items-center order-1 -mt-40 bg-white rounded-full ms-2 circle w-7 h-7 ">

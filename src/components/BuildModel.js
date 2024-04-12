@@ -10,7 +10,7 @@ const BuildModel = () => {
       className="relative table w-full px-3 bg-center bg-cover py-36 lg:py-72 lg:pb-0 md:pb-8"
       style={{ height: "400px", backgroundImage: `url(${BuildModelImage})` }}
     >
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <div className="absolute inset-0 bg-black opacity-70"></div>
       <div className="container relative mx-auto lg:px-10">
         <div className="grid gap-2 mt-10 lg:grid-cols-12 md:grid-cols-2">
           <div className="lg:col-span-7">
