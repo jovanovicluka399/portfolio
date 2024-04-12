@@ -298,7 +298,7 @@ const WhatWeDoModel = () => {
 
         <div className="container w-full h-full mx-auto mt-20">
           <div className="relative h-full overflow-hidden md:p-10 wrap">
-            <div className="absolute h-full mt-10 wide-dashed-line opacity-20 ms-5 md:ms-1 md:left-1/2"></div>
+            <div className="absolute h-full mt-10 wide-dashed-line opacity-20 ms-[22px] md:ms-[2px] md:left-1/2"></div>
 
             <div className="items-center w-full mb-20 md:justify-between md:flex right-timeline">
               <div className="order-1 w-full md:w-5/12 ms-10 md:text-right">
