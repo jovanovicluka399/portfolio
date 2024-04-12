@@ -5,7 +5,7 @@ import UpwindImage2 from "../assets/Upwind2.png";
 import UpwindImage3 from "../assets/Upwind3.png";
 import { Transition } from "@headlessui/react";
 
-const Navbar = () => {
+const Navbar = ({ scrollToSection }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const handleScroll = () => {
@@ -52,7 +52,7 @@ const Navbar = () => {
               </a>
             </div>
             <div className="hidden lg:block">
-              <div className="flex items-baseline ml-10 space-x-4">
+              <div className="flex items-baseline ml-10 space-x-10">
                 <a className="" href="/">
                   <span
                     className={`text-lg font-medium nav-link ${
@@ -62,68 +62,89 @@ const Navbar = () => {
                     Home
                   </span>
                 </a>
-                <a className="" href="/">
-                  <span
-                    className={`text-lg nav-link ${
-                      isSticky ? "text-slate-600" : " text-slate-400"
-                    }`}
-                  >
-                    About us
-                  </span>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("about-us");
+                  }}
+                  className={`text-lg nav-link ${
+                    isSticky ? "text-slate-600" : " text-slate-400"
+                  }`}
+                >
+                  About Us
                 </a>
-                <a className="" href="/">
-                  <span
-                    className={`text-lg nav-link ${
-                      isSticky ? "text-slate-600" : " text-slate-400"
-                    }`}
-                  >
-                    Services
-                  </span>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("what-we-do");
+                  }}
+                  className={`text-lg nav-link ${
+                    isSticky ? "text-slate-600" : " text-slate-400"
+                  }`}
+                >
+                  Services
                 </a>
-                <a className="" href="/">
-                  <span
-                    className={`text-lg nav-link ${
-                      isSticky ? "text-slate-600" : " text-slate-400"
-                    }`}
-                  >
-                    Portfolio
-                  </span>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("portfolio");
+                  }}
+                  className={`text-lg nav-link ${
+                    isSticky ? "text-slate-600" : " text-slate-400"
+                  }`}
+                >
+                  Portfolio
                 </a>
-                <a className="" href="/">
-                  <span
-                    className={`text-lg nav-link ${
-                      isSticky ? "text-slate-600" : " text-slate-400"
-                    }`}
-                  >
-                    Review
-                  </span>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("review");
+                  }}
+                  className={`text-lg nav-link ${
+                    isSticky ? "text-slate-600" : " text-slate-400"
+                  }`}
+                >
+                  Review
                 </a>
-                <a className="" href="/">
-                  <span
-                    className={`text-lg nav-link ${
-                      isSticky ? "text-slate-600" : " text-slate-400"
-                    }`}
-                  >
-                    Pricing
-                  </span>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("pricing");
+                  }}
+                  className={`text-lg nav-link ${
+                    isSticky ? "text-slate-600" : " text-slate-400"
+                  }`}
+                >
+                  Pricing
                 </a>
-                <a className="" href="/">
-                  <span
-                    className={`text-lg nav-link ${
-                      isSticky ? "text-slate-600" : " text-slate-400"
-                    }`}
-                  >
-                    Blog
-                  </span>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("blog");
+                  }}
+                  className={`text-lg nav-link ${
+                    isSticky ? "text-slate-600" : " text-slate-400"
+                  }`}
+                >
+                  Blog
                 </a>
-                <a className="" href="/">
-                  <span
-                    className={`text-lg nav-link ${
-                      isSticky ? "text-slate-600" : " text-slate-400"
-                    }`}
-                  >
-                    Contact us
-                  </span>
+                <a
+                  href="#"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection("contact");
+                  }}
+                  className={`text-lg nav-link ${
+                    isSticky ? "text-slate-600" : " text-slate-400"
+                  }`}
+                >
+                  Contact us
                 </a>
               </div>
             </div>
@@ -222,7 +243,10 @@ const Navbar = () => {
       >
         {(ref) => (
           <div className="lg:hidden" id="mobile-menu">
-            <div ref={ref} className="pt-2 pb-3 mt-2 space-y-7 overflow-y-scroll p-x-2 h-[350px] sm:px-3">
+            <div
+              ref={ref}
+              className="pt-2 pb-3 mt-2 space-y-7 overflow-y-scroll p-x-2 h-[350px] sm:px-3"
+            >
               <a
                 href="/Home"
                 className="block px-3 text-base font-medium text-orange-600"

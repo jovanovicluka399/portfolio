@@ -11,22 +11,53 @@ import Footer from "./components/Footer";
 import NavBarModel from "./components/NavBarModel";
 import BuildModel from "./components/BuildModel";
 import WhiteModel from "./components/WhiteModel";
+import React, { useRef } from "react";
 
 function App() {
+  const aboutUsRef = useRef(null);
+  const whatWeDoRef = useRef(null);
+  const portfolioRef = useRef(null);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navbarHeight = 56; // Replace with your navbar's actual height
+      const y = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+      element.scrollIntoView({ behavior: 'smooth', block: 'start', top: y });
+    } else {
+      console.error(`Element with ID "${sectionId}" not found.`);
+    }
+  };
+  
+
   return (
     <div className="h-full min-h-full">
-      <NavBarModel />
+      <NavBarModel scrollToSection={scrollToSection} />
       <BuildModel />
       <WhiteModel />
-      <WhoWeAreModel />
-      <WhatWeDoModel />
-      <PortfolioModel />
+      <div ref={aboutUsRef} id="about-us">
+        <WhoWeAreModel />
+      </div>
+      <div ref={whatWeDoRef} id="what-we-do">
+        <WhatWeDoModel />
+      </div>
+      <div ref={portfolioRef} id="portfolio">
+        <PortfolioModel />
+      </div>
       <ReadyModel />
-      <TestimonialModel />
-      <PricingModel />
+      <div ref={portfolioRef} id="review">
+        <TestimonialModel />
+      </div>
+      <div ref={portfolioRef} id="pricing">
+        <PricingModel />
+      </div>
       <OurTeamModel />
-      <LatestNews />
-      <ContactUsModel />
+      <div ref={portfolioRef} id="blog">
+        <LatestNews />
+      </div>
+      <div ref={portfolioRef} id="contact">
+        <ContactUsModel />
+      </div>
       <Footer />
     </div>
   );
